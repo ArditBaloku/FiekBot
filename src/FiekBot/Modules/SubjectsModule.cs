@@ -14,7 +14,7 @@ namespace FiekBot.Modules
 
         public SubjectsModule()
         {
-            subjects = TryLoad("lendet.json");
+            subjects = TryLoad("info.json");
         }
 
         [Command("info")]
