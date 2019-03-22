@@ -55,7 +55,7 @@ namespace FiekBot.Utils
             var dist = 0;
             if (value.Length >= 4)
             {
-                if (value.Contains(query))
+                if (value.Contains(query) || query.Contains(value))
                 {
 
                 }
