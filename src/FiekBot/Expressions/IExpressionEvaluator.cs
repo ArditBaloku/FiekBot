@@ -1,4 +1,4 @@
-﻿namespace FiekBot.Math
+﻿namespace FiekBot.Expressions
 {
     public interface IExpressionEvaluator
     {

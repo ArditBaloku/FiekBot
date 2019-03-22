@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Discord.Commands;
-using FiekBot.Math;
+using FiekBot.Expressions;
 
 namespace FiekBot.Modules
 {

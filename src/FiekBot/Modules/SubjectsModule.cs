@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Text;
 using System.Threading.Tasks;
 using Discord.Commands;
 using FiekBot.Utils;
@@ -43,7 +44,8 @@ namespace FiekBot.Modules
         {
             try
             {
-                return JArray.Parse(File.ReadAllText(path));
+                var text = File.ReadAllText(path);
+                return JArray.Parse(text);
             }
             catch
             {

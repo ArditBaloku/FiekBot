@@ -1,6 +1,6 @@
 ﻿using NCalc;
 
-namespace FiekBot.Math
+namespace FiekBot.Expressions
 {
     public class MathEvaluator : IExpressionEvaluator
     {
