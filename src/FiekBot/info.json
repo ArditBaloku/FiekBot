@@ -91,7 +91,7 @@
     "Fondi i orëve": "2+0+0"
   },
   {
-    "_id": "edongashi",
+    "_id": [ "edongashi", "edongashiasistent" ],
     "_label": "Edon Gashi (Asistent)",
     "Email": "edon.gashi@uni-pr.edu"
   }
