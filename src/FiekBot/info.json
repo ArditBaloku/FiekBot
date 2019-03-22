@@ -94,5 +94,10 @@
     "_id": [ "edongashi", "edongashiasistent" ],
     "_label": "Edon Gashi (Asistent)",
     "Email": "edon.gashi@uni-pr.edu"
+  },
+  {
+    "_id":["fatbardhkadriu","fatbardhkadriuasistent"],
+    "_label":["Fatbardh Kadriu (Student)"],
+    "Email": "fatbardh.kadriu@gmail.com"
   }
 ]
