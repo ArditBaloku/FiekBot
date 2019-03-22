@@ -96,8 +96,14 @@
     "Email": "edon.gashi@uni-pr.edu"
   },
   {
-        "_id": [ "fatbardhkadriu", "fatbardhkadriuasistent" ],
+        "_id": [ "fatbardhkadriu", "FatbardhKadriuStudent" ],
         "_label": "Fatbardh Kadriu (Student)",
         "Email": "fatbardh.kadriu@gmail.com"
+  },
+  {
+    "_id":["studentet","studentetdiplomuar"],
+    "emri":"Dokleat",
+    "mbiemri":"Kollari",
+    "vendiIlindjes":"I lindur mbi poste"
   }
 ]
