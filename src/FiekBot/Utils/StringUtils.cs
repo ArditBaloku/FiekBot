@@ -7,7 +7,7 @@ namespace FiekBot.Utils
     internal static class StringUtils
     {
         private static readonly Regex ReplacementRegex = 
-            new Regex(@"(?:\s|^)(?:E|I|DHE|TE)(?:\s|$)");
+            new Regex(@"(?<=\s|^)(?:E|I|DHE|TE)(?=\s|$)");
 
         private static readonly Regex WhitespaceRegex =
             new Regex(@"[\s\r\n]");
