@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -48,9 +50,45 @@ namespace FiekBot.Utils
             return stringBuilder.ToString().Normalize(NormalizationForm.FormC);
         }
 
-        public static int GetDamerauLevenshteinDistance(string s, string t)
+        public static int Distance(string value, string query)
         {
-            var bounds = new { Height = s.Length + 1, Width = t.Length + 1 };
+            var dist = 0;
+            if (value.Length >= 4)
+            {
+                if (value.Contains(query))
+                {
+
+                }
+                else
+                {
+                    dist += DamerauLevenshteinDistance(value, query);
+                }
+            }
+            else
+            {
+                dist += DamerauLevenshteinDistance(value, query);
+            }
+
+            if (value.Length < 5)
+            {
+                dist += 2 * (5 - value.Length);
+            }
+
+            if (query.Length < 4)
+            {
+                dist += 4 - query.Length;
+            }
+
+            value = value.Where(char.IsLetterOrDigit).Distinct().MakeString();
+            query = query.Where(char.IsLetterOrDigit).Distinct().MakeString();
+            dist += value.Except(query).Count();
+            dist += query.Except(value).Count();
+            return dist;
+        }
+
+        private static int DamerauLevenshteinDistance(string a, string b)
+        {
+            var bounds = new { Height = a.Length + 1, Width = b.Length + 1 };
 
             var matrix = new int[bounds.Height, bounds.Width];
 
@@ -68,14 +106,14 @@ namespace FiekBot.Utils
             {
                 for (var width = 1; width < bounds.Width; width++)
                 {
-                    var cost = (s[height - 1] == t[width - 1]) ? 0 : 1;
+                    var cost = a[height - 1] == b[width - 1] ? 0 : 1;
                     var insertion = matrix[height, width - 1] + 1;
                     var deletion = matrix[height - 1, width] + 1;
                     var substitution = matrix[height - 1, width - 1] + cost;
 
                     var distance = Math.Min(insertion, Math.Min(deletion, substitution));
 
-                    if (height > 1 && width > 1 && s[height - 1] == t[width - 2] && s[height - 2] == t[width - 1])
+                    if (height > 1 && width > 1 && a[height - 1] == b[width - 2] && a[height - 2] == b[width - 1])
                     {
                         distance = Math.Min(distance, matrix[height - 2, width - 2] + cost);
                     }
@@ -85,6 +123,16 @@ namespace FiekBot.Utils
             }
 
             return matrix[bounds.Height - 1, bounds.Width - 1];
+        }
+
+        public static string Join<T>(this IEnumerable<T> list, string separator)
+        {
+            return string.Join(separator, list);
+        }
+
+        public static string MakeString(this IEnumerable<char> chars)
+        {
+            return new string(chars.ToArray());
         }
     }
 }

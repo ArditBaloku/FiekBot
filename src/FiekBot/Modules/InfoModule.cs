@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using Discord.Commands;
 using FiekBot.Utils;
@@ -32,6 +33,19 @@ namespace FiekBot.Modules
             if (obj != null)
             {
                 await ReplyAsync($"Informatat për **{query}**", embed: JsonUtils.EmbedObject(obj));
+                return;
+            }
+
+            const int threshold = 8;
+            const int count = 3;
+
+            // No match, try finding suggestions.
+            var matches = JsonUtils.FindClosest(data, normalized, threshold, count);
+            if (matches.Length != 0)
+            {
+                await ReplyAsync($"Termi **{query}** nuk u gjet.\n\n"
+                                 + "Mos keni menduar për ndonjërën nga:\n"
+                                 + matches.Select(match => "- " + match["_label"]).Join("\n"));
             }
             else
             {
