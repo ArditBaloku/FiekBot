@@ -1,12 +1,37 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace FiekBot
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello World from fiekbot!");
+            // App configuration: default -> config.json -> env -> args.
+            var builder = new ConfigurationBuilder()
+                .AddInMemoryCollection(new Dictionary<string, string>
+                {
+                    ["prefix"] = "!"
+                })
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile("config.json", optional: true)
+                .AddEnvironmentVariables()
+                .AddCommandLine(args);
+            var configuration = builder.Build();
+
+            // Startup object that configures services.
+            var startup = new Startup(configuration);
+
+            // Build service collection and configure it.
+            var services = new ServiceCollection();
+            startup.ConfigureServices(services);
+
+            // Run app using the built service provider.
+            var serviceProvider = services.BuildServiceProvider();
+            await startup.Run(serviceProvider);
         }
     }
 }
