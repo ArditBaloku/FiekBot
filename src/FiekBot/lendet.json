@@ -1,8 +1,80 @@
 [
-  {
-    "_id": [ "mat1", "matematika1" ],
-    "Titulli": "Matematika 1",
-    "Mesimdhenesit": [ "Filan Fisteku 1", "Filane Fisteku 2" ],
-    "Fondi i oreve": "2+2"
-  }
+    {
+        "_id": [ "mat1", "matematika1" ],
+        "Titulli": "Matematika 1",
+        "Mesimdhenesit": [ "Shqipe Lohaj", "Qefsere Doko Gjonbalaj", "Valdete Rexhebeqaj-Hamiti" ],
+        "Fondi i oreve": "3+3+0"
+    },
+    {
+        "_id": "elektronika",
+        "Titulli": "Elektronika",
+        "Mesimdhenesit": [ "Qamil Kabashi", "Myzafere Limani", "Milaim Zabeli" ],
+        "Fondi i oreve": "2+2+1"
+    },
+    {
+        "_id": [ "matematika3k", "mat3k" ],
+        "Titulli": "Matematika 3K",
+        "Mesimdhenesi": "Qefsere Doko Gjonbalaj",
+        "Fondi i oreve": "2+2+0"
+    },
+    {
+        "_id": [ "sinjaletsistemet", "sinjale" ],
+        "Titulli": "Sinjalet dhe Sistemet",
+        "Mesimdhenesit": [ "Ilir Limani", "Vjosa Shatri" ],
+        "Fondi i oreve": "3+2+0"
+    },
+    {
+        "_id": [ "Bazatdhenave", "databaza" ],
+        "Titulli": "Bazat e te Dhenave",
+        "Mesimdhenesit": "Lule Ahmedi",
+        "Fondi i oreve": "2+2+0"
+    },
+    {
+        "_id": [ "programimiorientuarobjekte", "oop", "poo" ],
+        "Titulli": "Programimi i Orientuar ne Objekte",
+        "Mesimdhenesit": "Isak Shabani",
+        "Fondi i oreve": "2+2+0"
+    },
+    {
+        "_id": "interneti",
+        "Titulli": "Interneti",
+        "Mesimdhenesit": "Lule Ahmedi",
+        "Fondi i oreve": "2+2+0"
+    },
+    {
+        "_id": [ "arkitekturakompjutereve", "arkitektura", "aok" ],
+        "Titulli": "Arkitektura e Kompjutereve",
+        "Mesimdhenesit": [ "Adnan Maxhuni", "Qamil Kabashi" ],
+        "Fondi i oreve": "2+2+0"
+    },
+    {
+        "_id": [ "rrjetatkompjuterike", "rrjetat" ],
+        "Titulli": "Rrjetat Kompjuterike",
+        "Mesimdhenesit": "Blerim Rexha",
+        "Fondi i oreve": "2+2+0"
+    },
+    {
+        "_id": [ "siguriadhenave", "siguria" ],
+        "Titulli": "Siguria e te dhenave",
+        "Mesimdhenesit": "Blerim Rexha",
+        "Fondi i oreve": "2+2+0"
+    },
+    {
+        "_id": [ "komunikiminjerikompjuter", "knk" ],
+        "Titulli": "Komunikimi Njeri-Kompjuter",
+        "Mesimdhenesit": "Isak Shabani",
+        "Fondi i oreve": "2+2+0"
+    },
+    {
+        "_id": [ "programimiinternet", "pi" ],
+        "Titulli": "Programimi ne Internet",
+        "Mesimdhenesit": "Lule Ahmedi",
+        "Fondi i oreve": "2+2+0"
+    },
+    {
+        "_id": [ "menaxhimiprojekteve", "menaxhim" ],
+        "Titulli": "Menaxhimi i Projekteve",
+        "Mesimdhenesit": "Ruzhdi Sefa",
+        "Fondi i oreve": "2+0+0"
+    }
 ]
