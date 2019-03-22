@@ -79,8 +79,7 @@ namespace FiekBot.Utils
                         .Select(Stringify)
                         .Where(v => v != null)
                         .Select(v => "- " + v)
-                        .Join("\n")
-                        .Normalize();
+                        .Join("\n");
                 case JValue value:
                     return value.ToString(CultureInfo.InvariantCulture);
                 default:
