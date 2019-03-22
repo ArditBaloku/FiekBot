@@ -50,12 +50,6 @@ namespace FiekBot.Utils
             return array
                 .OfType<JObject>()
                 .Select(obj => (obj, dist: MeasurePropsDistance(obj, query)))
-                .OrderBy(x => x.dist)
-                .Select(x =>
-                {
-                    Console.WriteLine($"Dist: [{x.obj["_label"]}] [{query}] = {x.dist}");
-                    return x;
-                })
                 .Where(x => x.dist <= threshold && x.obj["_label"] != null)
                 .OrderBy(x => x.dist)
                 .Select(x => x.obj)
