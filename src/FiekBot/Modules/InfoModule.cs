@@ -25,7 +25,7 @@ namespace FiekBot.Modules
             var normalized = StringUtils.NormalizeQuery(query);
             if (normalized == null)
             {
-                await ReplyAsync("Jepni një emër valid të lëndës.");
+                await ReplyAsync($"Termi **{query}** nuk u gjet.");
                 return;
             }
 
