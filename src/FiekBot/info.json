@@ -1,7 +1,7 @@
 ﻿[
   {
     "_id": [ "mat1", "matematika1" ],
-    "_label": "Matematika 1", 
+    "_label": "Matematika 1",
     "Titulli": "Matematika 1",
     "Mësimdhënësit": [ "Shqipe Lohaj", "Qefsere Doko Gjonbalaj", "Valdete Rexhebeqaj-Hamiti" ],
     "Fondi i orëve": "3+3+0"
@@ -89,5 +89,10 @@
     "Titulli": "Menaxhimi i Projekteve",
     "Mësimdhënësit": "Ruzhdi Sefa",
     "Fondi i orëve": "2+0+0"
+  },
+  {
+    "_id": "edongashi",
+    "_label": "Edon Gashi (Asistent)",
+    "Email": "edon.gashi@uni-pr.edu"
   }
 ]
