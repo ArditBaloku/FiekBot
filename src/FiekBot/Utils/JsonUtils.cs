@@ -46,7 +46,6 @@ namespace FiekBot.Utils
                 return Empty;
             }
 
-            Console.WriteLine("===========");
             return array
                 .OfType<JObject>()
                 .Select(obj => (obj, dist: MeasurePropsDistance(obj, query)))
