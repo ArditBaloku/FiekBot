@@ -16,6 +16,7 @@ namespace FiekBot.Modules
         public IExpressionEvaluator Evaluator { get; }
 
         [Command("llogarit"), Alias("calc")]
+        [Summary("Llogarit shprehjen matematikore.")]
         public async Task HelpAsync([Name("shprehja"), Remainder] string expression)
         {
             var result = Evaluator.Evaluate(expression);
