@@ -10,7 +10,7 @@ namespace FiekBot.Utils
             new Regex(@"(?<=\s|^)(?:E|I|DHE|TE)(?=\s|$)");
 
         private static readonly Regex WhitespaceRegex =
-            new Regex(@"[\s\r\n]");
+            new Regex(@"[\s\r\n-]");
 
         public static string NormalizeQuery(string query)
         {
