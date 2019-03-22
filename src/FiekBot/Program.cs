@@ -30,8 +30,10 @@ namespace FiekBot
             startup.ConfigureServices(services);
 
             // Run app using the built service provider.
-            var serviceProvider = services.BuildServiceProvider();
-            await startup.Run(serviceProvider);
+            using (var serviceProvider = services.BuildServiceProvider())
+            {
+                await startup.Run(serviceProvider);
+            }
         }
     }
 }
