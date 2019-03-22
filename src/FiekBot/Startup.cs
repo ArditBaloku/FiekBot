@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
+using FiekBot.Math;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -36,6 +37,8 @@ namespace FiekBot
                 LogLevel = LogSeverity.Verbose, // Tell the logger to give Verbose amount of info.
                 DefaultRunMode = RunMode.Async, // Force all commands to run async by default.
             }));
+
+            services.AddSingleton<IExpressionEvaluator, MathEvaluator>();
 
             // Add the bot service to the collection.
             services.AddSingleton<BotService>();
