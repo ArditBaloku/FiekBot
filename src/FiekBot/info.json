@@ -3,91 +3,91 @@
     "_id": [ "mat1", "matematika1" ],
     "_label": "Matematika 1", 
     "Titulli": "Matematika 1",
-    "Mesimdhenesit": [ "Shqipe Lohaj", "Qefsere Doko Gjonbalaj", "Valdete Rexhebeqaj-Hamiti" ],
-    "Fondi i oreve": "3+3+0"
+    "Mësimdhënësit": [ "Shqipe Lohaj", "Qefsere Doko Gjonbalaj", "Valdete Rexhebeqaj-Hamiti" ],
+    "Fondi i orëve": "3+3+0"
   },
   {
     "_id": "elektronika",
     "_label": "Elektronika",
     "Titulli": "Elektronika",
-    "Mesimdhenesit": [ "Qamil Kabashi", "Myzafere Limani", "Milaim Zabeli" ],
-    "Fondi i oreve": "2+2+1"
+    "Mësimdhënësit": [ "Qamil Kabashi", "Myzafere Limani", "Milaim Zabeli" ],
+    "Fondi i orëve": "2+2+1"
   },
   {
     "_id": [ "matematika3k", "mat3k" ],
     "_label": "Matematika 3K",
     "Titulli": "Matematika 3K",
     "Mesimdhenesi": "Qefsere Doko Gjonbalaj",
-    "Fondi i oreve": "2+2+0"
+    "Fondi i orëve": "2+2+0"
   },
   {
     "_id": [ "sinjaletsistemet", "sinjale" ],
     "_label": "Sinjalet dhe Sistemet",
     "Titulli": "Sinjalet dhe Sistemet",
-    "Mesimdhenesit": [ "Ilir Limani", "Vjosa Shatri" ],
-    "Fondi i oreve": "3+2+0"
+    "Mësimdhënësit": [ "Ilir Limani", "Vjosa Shatri" ],
+    "Fondi i orëve": "3+2+0"
   },
   {
     "_id": [ "bazatdhenave", "databaza" ],
     "_label": "Bazat e te Dhenave",
     "Titulli": "Bazat e te Dhenave",
-    "Mesimdhenesit": "Lule Ahmedi",
-    "Fondi i oreve": "2+2+0"
+    "Mësimdhënësit": "Lule Ahmedi",
+    "Fondi i orëve": "2+2+0"
   },
   {
     "_id": [ "programimiorientuarobjekte", "oop", "poo" ],
     "_label": "Programimi i Orientuar ne Objekte",
     "Titulli": "Programimi i Orientuar ne Objekte",
-    "Mesimdhenesit": "Isak Shabani",
-    "Fondi i oreve": "2+2+0"
+    "Mësimdhënësit": "Isak Shabani",
+    "Fondi i orëve": "2+2+0"
   },
   {
     "_id": "interneti",
     "_label": "Interneti",
     "Titulli": "Interneti",
-    "Mesimdhenesit": "Lule Ahmedi",
-    "Fondi i oreve": "2+2+0"
+    "Mësimdhënësit": "Lule Ahmedi",
+    "Fondi i orëve": "2+2+0"
   },
   {
     "_id": [ "arkitekturakompjutereve", "arkitektura", "aok" ],
     "_label": "Arkitektura e Kompjutereve",
     "Titulli": "Arkitektura e Kompjutereve",
-    "Mesimdhenesit": [ "Adnan Maxhuni", "Qamil Kabashi" ],
-    "Fondi i oreve": "2+2+0"
+    "Mësimdhënësit": [ "Adnan Maxhuni", "Qamil Kabashi" ],
+    "Fondi i orëve": "2+2+0"
   },
   {
     "_id": [ "rrjetatkompjuterike", "rrjetat" ],
     "_label": "Rrjetat Kompjuterike",
     "Titulli": "Rrjetat Kompjuterike",
-    "Mesimdhenesit": "Blerim Rexha",
-    "Fondi i oreve": "2+2+0"
+    "Mësimdhënësit": "Blerim Rexha",
+    "Fondi i orëve": "2+2+0"
   },
   {
     "_id": [ "siguriadhenave", "siguria" ],
     "_label": "Siguria e te dhenave",
     "Titulli": "Siguria e te dhenave",
-    "Mesimdhenesit": "Blerim Rexha",
-    "Fondi i oreve": "2+2+0"
+    "Mësimdhënësit": "Blerim Rexha",
+    "Fondi i orëve": "2+2+0"
   },
   {
     "_id": [ "komunikiminjerikompjuter", "knk" ],
     "_label": "Komunikimi Njeri-Kompjuter",
     "Titulli": "Komunikimi Njeri-Kompjuter",
-    "Mesimdhenesit": "Isak Shabani",
-    "Fondi i oreve": "2+2+0"
+    "Mësimdhënësit": "Isak Shabani",
+    "Fondi i orëve": "2+2+0"
   },
   {
     "_id": [ "programimiinternet", "pi" ],
     "_label": "Programimi ne Internet",
     "Titulli": "Programimi ne Internet",
-    "Mesimdhenesit": "Lule Ahmedi",
-    "Fondi i oreve": "2+2+0"
+    "Mësimdhënësit": "Lule Ahmedi",
+    "Fondi i orëve": "2+2+0"
   },
   {
     "_id": [ "menaxhimiprojekteve", "menaxhim" ],
     "_label": "Menaxhimi i Projekteve",
     "Titulli": "Menaxhimi i Projekteve",
-    "Mesimdhenesit": "Ruzhdi Sefa",
-    "Fondi i oreve": "2+0+0"
+    "Mësimdhënësit": "Ruzhdi Sefa",
+    "Fondi i orëve": "2+0+0"
   }
 ]
