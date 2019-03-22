@@ -1,5 +1,4 @@
 ﻿using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 using Discord.Commands;
 using FiekBot.Utils;
@@ -7,36 +6,36 @@ using Newtonsoft.Json.Linq;
 
 namespace FiekBot.Modules
 {
-    [Name("Lëndët")]
-    [Summary("Informata për lëndët")]
-    public class SubjectsModule : Module
+    [Name("Informata")]
+    [Summary("Kërkim i informatave")]
+    public class InfoModule : Module
     {
-        private readonly JArray subjects;
+        private readonly JArray data;
 
-        public SubjectsModule()
+        public InfoModule()
         {
-            subjects = TryLoad("info.json");
+            data = TryLoad("info.json");
         }
 
         [Command("info")]
-        [Summary("Merr informata rreth lëndës.")]
-        public async Task SubjectInfo([Remainder, Name("lenda")] string subject)
+        [Summary("Kërko informacion rreth një termi.")]
+        public async Task SubjectInfo([Remainder, Name("termi")] string query)
         {
-            var normalized = StringUtils.NormalizeQuery(subject);
+            var normalized = StringUtils.NormalizeQuery(query);
             if (normalized == null)
             {
                 await ReplyAsync("Jepni një emër valid të lëndës.");
                 return;
             }
 
-            var obj = JsonUtils.LookupObject(subjects, normalized);
+            var obj = JsonUtils.LookupObject(data, normalized);
             if (obj != null)
             {
-                await ReplyAsync($"Informatat për lëndën **{subject}**", embed: JsonUtils.EmbedObject(obj));
+                await ReplyAsync($"Informatat për **{query}**", embed: JsonUtils.EmbedObject(obj));
             }
             else
             {
-                await ReplyAsync($"Lënda **{subject}** nuk u gjet.");
+                await ReplyAsync($"Termi **{query}** nuk u gjet.");
             }
         }
 
