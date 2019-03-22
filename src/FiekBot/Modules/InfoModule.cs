@@ -20,7 +20,7 @@ namespace FiekBot.Modules
 
         [Command("info")]
         [Summary("Kërko informacion rreth një termi.")]
-        public async Task SubjectInfo([Remainder, Name("termi")] string query)
+        public async Task GetInfo([Remainder, Name("termi")] string query)
         {
             var normalized = StringUtils.NormalizeQuery(query);
             if (normalized == null)
