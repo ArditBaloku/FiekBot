@@ -57,7 +57,7 @@ namespace FiekBot.Utils
             {
                 if (value.Contains(query) || query.Contains(value))
                 {
-
+                    // Containment of phrases, calc distance?
                 }
                 else
                 {

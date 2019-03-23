@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Discord;
 using Discord.Commands;
 using FiekBot.Utils;
 using Newtonsoft.Json.Linq;
@@ -43,9 +44,19 @@ namespace FiekBot.Modules
             var matches = JsonUtils.FindClosest(data, normalized, threshold, count);
             if (matches.Length != 0)
             {
-                await ReplyAsync($"Termi **{query}** nuk u gjet.\n\n"
-                                 + "Mos keni menduar për ndonjërën nga:\n"
-                                 + matches.Select(match => "- " + match["_label"]).Join("\n"));
+                var message = await ReplyAsync($"Termi **{query}** nuk u gjet.\n\n"
+                                  + "Mos keni menduar për ndonjërën nga:\n"
+                                  + matches.Select((match, i) => i + 1 + ") " + match["_label"]).Join("\n"));
+                await message.AddReactionAsync(new Emoji("\u0031\u20E3"));
+                if (matches.Length > 1)
+                {
+                    await message.AddReactionAsync(new Emoji("\u0032\u20E3"));
+                }
+
+                if (matches.Length > 2)
+                {
+                    await message.AddReactionAsync(new Emoji("\u0033\u20E3"));
+                }
             }
             else
             {
