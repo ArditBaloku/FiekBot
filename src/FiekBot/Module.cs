@@ -1,8 +1,9 @@
-﻿using Discord.Commands;
+﻿using Discord.Addons.Interactive;
+using Discord.Commands;
 
 namespace FiekBot
 {
-    public class Module : ModuleBase<SocketCommandContext>
+    public class Module : InteractiveBase<SocketCommandContext>
     {
     }
 }

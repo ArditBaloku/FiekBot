@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Discord.Commands;
 using FiekBot.Expressions;
+using FiekBot.Utils;
 
 namespace FiekBot.Modules
 {
@@ -21,6 +22,14 @@ namespace FiekBot.Modules
         {
             var result = Evaluator.Evaluate(expression);
             await ReplyAsync($"Rezultati: {result}");
+        }
+
+        [Command("dist"), Alias("distanca")]
+        [Summary("Llogarit distancën mes teksteve.")]
+        public async Task DistanceAsync(string a, string b)
+        {
+            var result = StringUtils.Distance(a, b);
+            await ReplyAsync($"Distanca ndërmjet \"{a}\" dhe \"{b}\" është {result}");
         }
     }
 }
