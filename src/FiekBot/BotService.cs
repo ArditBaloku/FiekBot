@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace FiekBot
 {
-    public class BotService
+    public class BotService : IDisposable
     {
         private readonly DiscordSocketClient discord;
         private readonly CommandService commands;
@@ -99,6 +99,11 @@ namespace FiekBot
                     await context.Channel.SendMessageAsync(errorMessage);
                 }
             }
+        }
+
+        public void Dispose()
+        {
+            discord.MessageReceived -= OnMessageReceivedAsync;
         }
     }
 }

@@ -14,11 +14,24 @@ namespace FiekBot.Modules
     [Summary("Kërkim i informatave")]
     public class InfoModule : Module
     {
-        private readonly JArray data;
+        private static readonly JArray Data;
 
-        public InfoModule()
+        static InfoModule()
         {
-            data = TryLoad("info.json");
+            Data = TryLoad("info.json");
+        }
+
+        private static JArray TryLoad(string path)
+        {
+            try
+            {
+                var text = File.ReadAllText(path);
+                return JArray.Parse(text);
+            }
+            catch
+            {
+                return new JArray();
+            }
         }
 
         [Command("info")]
@@ -32,7 +45,7 @@ namespace FiekBot.Modules
                 return;
             }
 
-            var obj = JsonUtils.LookupObject(data, normalized);
+            var obj = JsonUtils.LookupObject(Data, normalized);
             if (obj != null)
             {
                 await ReplyAsync(
@@ -45,22 +58,23 @@ namespace FiekBot.Modules
             const int count = 3;
 
             // No match, try finding suggestions.
-            var matches = JsonUtils.FindClosest(data, normalized, threshold, count);
+            var matches = JsonUtils.FindClosest(Data, normalized, threshold, count);
             if (matches.Length != 0)
             {
+                var emojis = new[] { "\u0031\u20E3", "\u0032\u20E3", "\u0033\u20E3" };
+
                 // Give suggestions and listen for reactions.
                 var text = $"Termi **{query}** nuk u gjet.\n\n"
-                              + "Mos keni menduar për ndonjërën nga:\n"
-                              + matches.Select((match, i) => i + 1 + ") " + match["_label"]).Join("\n");
+                           + "Mos keni menduar për ndonjërën nga:\n"
+                           + matches.Select((match, i) => i + 1 + ") " + match["_label"]).Join("\n");
 
                 var callback = new ReactionCallbackData(
                     text,
                     embed: null,
                     expiresAfterUse: true,
                     singleUsePerUser: true,
-                    timeout: TimeSpan.FromSeconds(15d));
+                    timeout: TimeSpan.FromSeconds(30d));
 
-                var emojis = new[] { "\u0031\u20E3", "\u0032\u20E3", "\u0033\u20E3" };
                 for (var i = 0; i < matches.Length; i++)
                 {
                     var term = matches[i]["_label"].ToString();
@@ -98,20 +112,7 @@ namespace FiekBot.Modules
                 return null;
             }
 
-            return JsonUtils.LookupObject(data, normalized);
-        }
-
-        private JArray TryLoad(string path)
-        {
-            try
-            {
-                var text = File.ReadAllText(path);
-                return JArray.Parse(text);
-            }
-            catch
-            {
-                return new JArray();
-            }
+            return JsonUtils.LookupObject(Data, normalized);
         }
     }
 }

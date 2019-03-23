@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using Discord;
@@ -14,7 +13,9 @@ namespace FiekBot.Utils
         public static Embed EmbedObject(JObject obj)
         {
             var embedBuilder = new EmbedBuilder()
-                .WithColor(new Color(0xB69554));
+            {
+                Color = Color.Teal
+            };
 
             foreach (var pair in obj)
             {

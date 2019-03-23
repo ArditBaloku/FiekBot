@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
@@ -25,7 +26,7 @@ namespace FiekBot.Modules
             var prefix = config["prefix"];
             var builder = new EmbedBuilder
             {
-                Color = new Color(114, 137, 218),
+                Color = Color.Teal,
                 Description = "Komandat të cilat mund t'i përdorni"
             };
 
@@ -68,7 +69,7 @@ namespace FiekBot.Modules
 
             var builder = new EmbedBuilder
             {
-                Color = new Color(114, 137, 218),
+                Color = Color.Teal,
                 Description = $"Informata për **{command}**"
             };
 
