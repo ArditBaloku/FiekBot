@@ -100,6 +100,11 @@
         "_label": "Fatbardh Kadriu (Student)",
         "Email": "fatbardh.kadriu@gmail.com"
   },
+    {
+        "_id": [ "eduardspahija", "EduardSpahijaStudent" ],
+        "_label": "Eduard Spahija (Student)",
+        "Email": "eduard-spahija@hotmail.com.com"
+  },
   {
     "_id":["studentet","studentetdiplomuar"],
     "emri":"Dokleat",
